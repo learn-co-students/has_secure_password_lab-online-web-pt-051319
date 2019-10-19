@@ -1,0 +1,9 @@
+<h1>Sessions#new</h1>
+<p>Find me in app/views/sessions/new.html.erb</p>
+
+<%= form_for @user, url: login_path, method: :post do |f| %>
+    <p>Name: <%= f.text_field :name %>   Password: <%= f.password_field :password %></p>
+  <%= f.submit "Login" %>
+  <br>
+  <%= button_to(controller: 'users', action: 'new') { 'Signup' } %>
+<% end %>
