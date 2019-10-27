@@ -1,0 +1,8 @@
+<h1>Sign up</h1>
+<%= form_for @user, url: {controller: 'users', action: 'create'} do |f| %>
+	<%= f.text_field :name , placeholder: "Choose your username" %>
+	<%= f.text_field :password , placeholder: "Choose your password" %>
+	<%= f.text_field :password_confirmation , placeholder: "Re-enter your password" %>
+	
+	<%= f.submit  %>
+<% end %>
